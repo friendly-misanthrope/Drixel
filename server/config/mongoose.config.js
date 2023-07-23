@@ -1,6 +1,14 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/Drixel', {
+// * Don't forget to change DB name!
+
+// ! ATTN: Please change connection URI below to 127.0.0.1
+// ! before running server.
+
+// ! I run VSCode in a virutal Linux environment that requires
+// ! the use a local network IP.
+
+mongoose.connect('mongodb://127.0.0.1:27017/drixel', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

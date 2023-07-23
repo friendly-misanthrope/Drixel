@@ -1,4 +1,5 @@
 require('dotenv').config()
+require('./config/mongoose.config')
 const https = require('https')
 const fs = require('fs')
 const express = require('express')
@@ -6,6 +7,7 @@ const cookieParser = require ('cookie-parser')
 const cors = require('cors')
 const UserRoutes = require('./routes/user.routes')
 const app = express()
+UserRoutes(app)
 
 // * Middleware
 app.use(
@@ -16,8 +18,6 @@ app.use(
   ),
   cookieParser()
 )
-
-UserRoutes(app)
 
 https
     .createServer({

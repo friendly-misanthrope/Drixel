@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const bcrypt = require('bcrypt')
 const { isEmail } = require('validator')
-const Album = require('./album.model')
 
 const UserSchema = new Schema({
   firstName : {
