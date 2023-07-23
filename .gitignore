@@ -1,0 +1,10 @@
+# Server
+server/node_modules
+server/.env
+server/rootCA-key.pem
+server/rootCA.pem
+
+# Client
+react-client/node_modules
+react-client/rootCA-key.pem
+react-client/rootCA.pem
