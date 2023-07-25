@@ -20,8 +20,8 @@ app.use(
 )
 
 https
-    .createServer({
-      key: fs.readFileSync("rootCA-key.pem"),
-      cert: fs.readFileSync("rootCA.pem")
-    }, app)
-      .listen(8000, () => console.log("HTTPS Express server now running on port 8000"))
+  .createServer({
+    key: fs.readFileSync("rootCA-key.pem"),
+    cert: fs.readFileSync("rootCA.pem")
+  }, app)
+    .listen(8000, () => console.log("HTTPS Express server now running on port 8000"))
