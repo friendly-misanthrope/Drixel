@@ -17,6 +17,18 @@ const Register = (props) => {
     setUser(prevState => {return {...prevState, [e.target.name]: e.target.value}})
   }
 
+  const submitHandler = (e) => {
+    e.preventDefault()
+
+    axios.post(`https://localhost:8000/api/auth/register`, user, {
+      withCredentials: true
+    })
+      .then((res) => {
+        console.log(res.data)
+        navigate('/dashboard')
+      })
+  }
+
   return (
     <div>
       <h1>Dashboard</h1>
