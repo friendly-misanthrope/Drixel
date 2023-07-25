@@ -11,6 +11,8 @@ const Register = (props) => {
     confirmPassword: ''
   })
 
+  const [errors, setErrors] = useState({})
+
   const navigate = useNavigate()
 
   const changeHandler = (e) => {
@@ -27,6 +29,7 @@ const Register = (props) => {
         console.log(res.data)
         navigate('/dashboard')
       })
+      .catch((err) => setErrors(err.response.data.error.errors))
   }
 
   return (
